@@ -1,7 +1,7 @@
 {
   "hosting": {
     "site": "ajaychaurasia",
-    "public": "dist\\my-verse",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",

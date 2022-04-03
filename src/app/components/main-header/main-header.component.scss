@@ -1,0 +1,8 @@
+@import "src/global-style/variables.scss";
+
+.header-body {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: $main-shade;
+}

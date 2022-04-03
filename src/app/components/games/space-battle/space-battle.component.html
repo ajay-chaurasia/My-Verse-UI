@@ -1,0 +1,23 @@
+<div class="body">
+    <h1>Space Battle</h1>
+    <h3>Use Arrow Keys to Move Player</h3>
+    <span>Enemies Killes &mdash; {{score}} | Level &mdash; {{level}}</span>
+    <div class="playground" (keydown)="handleKeyboardEvent($event)">
+        <div *ngFor="let xAxis of playground; index as i;" class="row">
+            <div *ngFor="let gamePixel of playground[i]; index as j;" class="column">
+                <div class="game-pixel {{getPixelClass(gamePixel)}}">.</div>
+            </div>
+        </div>
+    </div>
+    <div class="control-panel">
+        <button mat-button color="accent" (click)="startGame()">
+            <mat-icon>play_arrow</mat-icon>Start
+        </button>
+        <button mat-button color="accent" (click)="pauseGame()">
+            <mat-icon>pause_presentation</mat-icon>Pause
+        </button>
+        <button mat-button color="accent" (click)="stopGame()">
+            <mat-icon>stop</mat-icon>Stop
+        </button>
+    </div>
+</div>

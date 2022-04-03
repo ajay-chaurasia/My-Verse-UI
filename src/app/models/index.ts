@@ -1,0 +1,1 @@
+export { GamePixel } from './space-battle';

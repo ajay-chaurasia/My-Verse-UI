@@ -1,0 +1,42 @@
+.body {
+  text-align: center;
+  width: 100%;
+}
+
+span {
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-pixel {
+  height: 1rem;
+  width: 1rem;
+  background-color: black;
+  color: white;
+}
+
+.player {
+  background-color: red;
+}
+
+.control-panel {
+  width: 100%;
+  text-align: center;
+  justify-content: space-evenly;
+  padding-top: 2rem;
+  display: flex;
+}
+
+.playground {
+  width: min-content;
+  margin: auto;
+}
+
+.enemy {
+  background: green;
+}

@@ -1,0 +1,31 @@
+<div class="header-body">
+    <div class="left pad-10">
+        <button mat-button color="accent" routerLink="/">
+            <mat-icon>home</mat-icon>
+        </button>
+    </div>
+    <div class="right pad-10">
+        <button mat-button color="accent" [matMenuTriggerFor]="appMenu">
+            Apps
+        </button>
+        <button mat-button color="accent" [matMenuTriggerFor]="gameMenu">
+            Games
+        </button>
+        <button mat-button color="accent" routerLink="/portfolio">
+            Portfolio 
+        </button>
+        <button mat-button color="accent" routerLink="/contact">
+            Contact 
+        </button>
+    </div>
+</div>
+<mat-menu #appMenu="matMenu">
+    <button mat-menu-item routerLink="/apps/image-filter">Image Filter</button>
+    <button mat-menu-item routerLink="/apps/bmi-calculator">BMI Calculator</button>
+    <button mat-menu-item routerLink="/apps/instant-chat">Instant Chat</button>
+    <button mat-menu-item routerLink="/apps/geo-tagg">Geo Tagg</button>
+</mat-menu>
+<mat-menu #gameMenu="matMenu">
+    <button mat-menu-item routerLink="/games/snake-impact">Snake Impact</button>
+    <button mat-menu-item routerLink="/games/space-battle">Space Battle</button>
+</mat-menu>

@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@import "src/global-style/variables.scss";
+
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+h1 {
+    padding: 2rem;
+    color: $main-shade;
+    text-align: center;
+}
+
+.pad-5 {
+    padding: 0.5rem;
+}
+
+.pad-10 {
+    padding: 1rem;
+}
+
+button:hover {
+    background-color: rgb(173, 12, 47);
+}

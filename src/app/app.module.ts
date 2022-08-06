@@ -13,11 +13,6 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { MainHeaderComponent } from './components/main-header/main-header.component';
 import { MainFooterComponent } from './components/main-footer/main-footer.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { SnakeImpactComponent } from './components/games/snake-impact/snake-impact.component';
-import { SpaceBattleComponent } from './components/games/space-battle/space-battle.component';
-import { GamesHomeComponent } from './components/games-home/games-home.component';
-import { AppsHomeComponent } from './components/apps-home/apps-home.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,11 +20,7 @@ import { AppsHomeComponent } from './components/apps-home/apps-home.component';
     ContactUsComponent,
     MainHeaderComponent,
     MainFooterComponent,
-    PageNotFoundComponent,
-    SnakeImpactComponent,
-    SpaceBattleComponent,
-    GamesHomeComponent,
-    AppsHomeComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

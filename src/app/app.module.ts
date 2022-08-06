@@ -4,6 +4,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatCardModule } from '@angular/material/card'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -13,6 +14,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { MainHeaderComponent } from './components/main-header/main-header.component';
 import { MainFooterComponent } from './components/main-footer/main-footer.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { MatToolbarModule } from '@angular/material/toolbar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +32,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     MatButtonModule,
     MatIconModule,
     MatTabsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCardModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,30 @@
-h1, h2 {
-    text-align: center;
+.content-body {
+    display: flex;
+    justify-content: stretch;
+}
+
+.intro-card {
+    margin: 2em;
+    width: 100%;
+    display: flex;
+    background-color: gold;
+
+    span {
+        font-weight: bold;
+    }
+}
+
+@media(max-width: 750px) {
+    .intro-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.display-picture {
+    border-radius: 50%;
+    height: 10rem;
+    width: 10rem;
+    box-shadow: 0 0 1rem grey;
 }

@@ -1,23 +1,10 @@
-<mat-toolbar class="header-body">
-    <div class="left pad-10">
-        <button mat-button color="accent" routerLink="/">
-            <mat-icon>home</mat-icon>
-        </button>
-    </div>
-    <div class="right pad-10">
-        <button mat-button color="accent" [matMenuTriggerFor]="appMenu">
-            Apps
-        </button>
-        <button mat-button color="accent" [matMenuTriggerFor]="gameMenu">
-            Games
-        </button>
-        <button mat-button color="accent" routerLink="/portfolio">
-            Portfolio 
-        </button>
-        <button mat-button color="accent" routerLink="/contact">
-            Contact 
-        </button>
-    </div>
+<mat-toolbar class="desktop-header">
+    <div class="left"><ng-container *ngTemplateOutlet="homeButton"></ng-container></div>
+    <div class="right"><ng-container *ngTemplateOutlet="menuItems"></ng-container></div>
+</mat-toolbar>
+<mat-toolbar class="mobile-header">
+    <mat-toolbar-row><ng-container *ngTemplateOutlet="homeButton"></ng-container></mat-toolbar-row>
+    <mat-toolbar-row><ng-container *ngTemplateOutlet="menuItems"></ng-container></mat-toolbar-row>
 </mat-toolbar>
 <mat-menu #appMenu="matMenu">
     <button mat-menu-item routerLink="/apps/book-library">Book Library</button>
@@ -30,3 +17,23 @@
     <button mat-menu-item routerLink="/games/space-battle">Space Battle</button>
     <button mat-menu-item routerLink="/games/snake-impact">Snake Impact</button>
 </mat-menu>
+<ng-template #homeButton>
+        <button mat-button color="accent" routerLink="/" class="home-btn">
+            <mat-icon>home</mat-icon>
+        </button>
+        <span>My Verse</span>
+</ng-template>
+<ng-template #menuItems>
+        <button mat-button color="accent" [matMenuTriggerFor]="appMenu">
+            Apps
+        </button>
+        <button mat-button color="accent" [matMenuTriggerFor]="gameMenu">
+            Games
+        </button>
+        <button mat-button color="accent" routerLink="/portfolio">
+            Portfolio 
+        </button>
+        <button mat-button color="accent" routerLink="/contact">
+            Contact 
+        </button>
+</ng-template>

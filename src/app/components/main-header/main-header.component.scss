@@ -1,9 +1,52 @@
 @import "src/global-style/variables.scss";
 
-.header-body {
+span {
+    color: $button-font;
+    padding-left: 0.5rem;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+
+    .home-btn {
+        position: relative;
+    }
+}
+
+.desktop-header {
     width: 100%;
     display: flex;
     justify-content: space-between;
     background-color: $main-shade;
     box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+}
+
+.mobile-header {
+    display: none;
+    justify-content: space-between;
+    background-color: $main-shade;
+    box-shadow: 0 3px 5px -1px #0003, 0 6px 10px #00000024, 0 1px 18px #0000001f;
+
+    mat-toolbar-row {
+        display: flex;
+
+        button {
+            flex: 1;
+        }
+
+        .home-btn {
+            flex: unset;
+        }
+    }
+}
+
+@media(max-width: 750px) {
+    .desktop-header {
+        display: none;
+    }
+
+    .mobile-header {
+        display: flex;
+    }
 }

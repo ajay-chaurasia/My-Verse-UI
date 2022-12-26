@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LandingComponent } from './components/landing/landing.component';
 import { RouterModule } from '@angular/router';
-import { ContactUsComponent } from './components/contact-us/contact-us.component';
+import { AboutMeComponent } from './components/about-me/about-me.component';
 import { MainHeaderComponent } from './components/main-header/main-header.component';
 import { MainFooterComponent } from './components/main-footer/main-footer.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
@@ -19,7 +19,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
   declarations: [
     AppComponent,
     LandingComponent,
-    ContactUsComponent,
+    AboutMeComponent,
     MainHeaderComponent,
     MainFooterComponent,
     PageNotFoundComponent

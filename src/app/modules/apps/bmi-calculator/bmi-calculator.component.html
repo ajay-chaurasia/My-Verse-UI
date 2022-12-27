@@ -1,0 +1,31 @@
+<div>
+    <h1>BMI Calculator</h1>
+    <div class="body-content">
+        <form class="input" [formGroup]="bmiForm" (onsubmit)="calculateBmi()">
+            <mat-form-field>
+                <mat-label>Age</mat-label>
+                <input formControlName="age" matInput placeholder="Number between 10-100">
+            </mat-form-field>
+            <mat-button-toggle-group formControlName="gender">
+                <mat-button-toggle value="male">Male</mat-button-toggle>
+                <mat-button-toggle value="female">Female</mat-button-toggle>
+            </mat-button-toggle-group>
+            <mat-form-field>
+                <mat-label>Weight (kg)</mat-label>
+                <input formControlName="weight" matInput placeholder="Number between 10-500">
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Height (cm)</mat-label>
+                <input formControlName="height" matInput placeholder="Number between 10-500">
+            </mat-form-field>
+            <button type="submit" [disabled]="disableCalculate" (click)="calculateBmi()">Calculate</button>
+        </form>
+        <h2 class="output" *ngIf="bmiData else message">
+            Your BMI is: {{ bmiData | number: '1.0-0' }} Kg/m<sup>2</sup>
+        </h2>
+        <ng-template #message>
+            Enter details and Calculate!
+        </ng-template>
+    </div>
+    <div class="footnote"></div>
+</div>

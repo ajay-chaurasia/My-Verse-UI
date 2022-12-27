@@ -1,0 +1,21 @@
+h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.body-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 3rem;
+
+    .input {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        
+        mat-button-toggle {
+            width: 50%;
+        }
+    }
+}

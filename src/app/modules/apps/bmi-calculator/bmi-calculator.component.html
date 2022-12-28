@@ -20,10 +20,10 @@
             </mat-form-field>
             <button type="submit" [disabled]="disableCalculate" (click)="calculateBmi()">Calculate</button>
         </form>
-        <h2 class="output" *ngIf="bmiData else message">
+        <h2 class="output" *ngIf="bmiValue else message">
             Your BMI is: 
-            <span [attr.color]="bmiColor">
-                {{ bmiData | number: '1.0-0' }} Kg/m<sup>2</sup>
+            <span [ngStyle]="bmiColorStyle">
+                {{ bmiValue | number: '1.0-0' }} Kg/m<sup>2</sup>
             </span>
         </h2>
         <ng-template #message>

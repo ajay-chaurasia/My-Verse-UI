@@ -7,11 +7,8 @@
     <mat-toolbar-row><ng-container *ngTemplateOutlet="menuItems"></ng-container></mat-toolbar-row>
 </mat-toolbar>
 <mat-menu #appMenu="matMenu">
-    <!-- <button mat-menu-item routerLink="/apps/image-filter">Image Filter</button> -->
     <button mat-menu-item routerLink="/apps/bmi-calculator">BMI Calculator</button>
     <button mat-menu-item routerLink="/apps/book-library">Book Library</button>
-    <!-- <button mat-menu-item routerLink="/apps/instant-chat">Instant Chat</button> -->
-    <!-- <button mat-menu-item routerLink="/apps/geo-tagg">Geo Tagg</button> -->
 </mat-menu>
 <mat-menu #gameMenu="matMenu">
     <button mat-menu-item routerLink="/games/space-battle">Space Battle</button>
@@ -29,6 +26,9 @@
         </button>
         <button mat-button color="accent" [matMenuTriggerFor]="gameMenu">
             Games
+        </button>
+        <button mat-button color="accent" routerLink="/blogs">
+            Blogs
         </button>
         <button mat-button color="accent" routerLink="/about-me">
             About Me 

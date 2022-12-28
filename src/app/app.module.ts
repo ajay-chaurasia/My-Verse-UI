@@ -15,6 +15,8 @@ import { MainHeaderComponent } from './components/main-header/main-header.compon
 import { MainFooterComponent } from './components/main-footer/main-footer.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { BlogsComponent } from './components/blogs/blogs.component';
+import { MatExpansionModule } from '@angular/material/expansion'
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     AboutMeComponent,
     MainHeaderComponent,
     MainFooterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    BlogsComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatTabsModule,
     MatMenuModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]

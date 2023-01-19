@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, ValidatorFn, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, ValidatorFn, Validators } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { map, takeUntil } from 'rxjs/operators';
 
@@ -11,13 +11,13 @@ import { map, takeUntil } from 'rxjs/operators';
 export class BmiCalculatorComponent implements OnInit, OnDestroy {
 
   thisComponentRef = new Subject()
-  bmiForm: FormGroup
+  bmiForm: UntypedFormGroup
   bmiValue: number = 0
   bmiColorStyle: object = {
     'color': 'black'
   }
   disableCalculate = true
-  constructor(private _formBuilder: FormBuilder) {
+  constructor(private _formBuilder: UntypedFormBuilder) {
       this.bmiForm = this._formBuilder.group({
         age: [null, this.getNumericValidators(100)],
         gender: [null, Validators.required],

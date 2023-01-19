@@ -1,38 +1,15 @@
 <mat-accordion>
-    <mat-expansion-panel hideToggle>
+    <mat-expansion-panel hideToggle *ngFor="let article of articles">
         <mat-expansion-panel-header>
             <mat-panel-title>
-                The mystery of Javascript
+                {{ article.heading }}
             </mat-panel-title>
             <mat-panel-description>
-                What is it and how does it work?
+                {{ article.subHeading }}
             </mat-panel-description>
         </mat-expansion-panel-header>
         <p>
-            Javascript is a fascinating scriptive language which is not interpreted anymore, atleast technically.
-            Modern browsers handle Javascript through a JIT compiler which parses the code into Abstract Syntax Tree and then compiles it into Machine Code.
-            This machine code is executed, but in background the JS Engine continues to optimize the code and replaces the old code with optimized code as it is executed.
-            <br>
-            Wait, what's JS Engine?
-            Read the next article to find out.
-        </p>
-    </mat-expansion-panel>
-
-    <mat-expansion-panel hideToggle>
-        <mat-expansion-panel-header>
-            <mat-panel-title>
-                JS Engine
-            </mat-panel-title>
-            <mat-panel-description>
-                What is it and what does it do?
-            </mat-panel-description>
-        </mat-expansion-panel-header>
-        <p>
-            JS Engine is the program which provides a Javascript code the environment to run it.
-            It provides callstack, event loop, callback queue and Web APIs such as setTimeout, console, DOM, fetch etc.
-            <br>
-            Javascript as we know is not asynchronous. Its single threaded language, but the Web APIs provided by the JS Engine is what makes it asynchronous.
-            Asynchronous activites happen in a separate thread in JS engine and then added to Task queue or the MicroTask queue after completion.
+            {{ article.content }}
         </p>
     </mat-expansion-panel>
 </mat-accordion>

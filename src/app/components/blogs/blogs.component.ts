@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
+import { take } from 'rxjs/operators';
+import { Article } from 'src/app/models';
+import { BlogService } from 'src/app/services';
 
 @Component({
   selector: 'app-blogs',
@@ -7,10 +10,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BlogsComponent implements OnInit {
 
+  articles: Article[]
   panelOpenState: boolean = false
-  constructor() { }
+  constructor(@Inject(BlogService) private blogService: BlogService) {
+    this.articles = [{
+      heading: "",
+      subHeading: "",
+      content: "",
+      keywords: []
+    }]
+  }
 
   ngOnInit(): void {
+    this.blogService.getPosts().pipe(
+      take(1)
+    ).subscribe((data) => {
+      this.articles = data.articles
+    })
+    this.blogService.savePost()
   }
 
 }

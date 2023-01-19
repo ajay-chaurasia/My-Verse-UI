@@ -17,6 +17,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { BlogsComponent } from './components/blogs/blogs.component';
 import { MatExpansionModule } from '@angular/material/expansion'
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +39,8 @@ import { MatExpansionModule } from '@angular/material/expansion'
     MatMenuModule,
     MatCardModule,
     MatToolbarModule,
-    MatExpansionModule
+    MatExpansionModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
